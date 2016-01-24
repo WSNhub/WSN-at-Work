@@ -1,0 +1,6 @@
+https://github.com/menudoproblema/Wireshark-MQTT
+wireshark -X lua_script:mqtt.lua
+
+mqtt.publish.topic matches "MyMQTT/69/6"
+
+

@@ -1,0 +1,138 @@
+sitemap default label="WSNatWork"
+{
+	Frame label="Nodes" {
+		Text label="PeterVA22" icon="smiley" {
+			Frame {
+				Text item=node22_test label="teller [%d]" icon="smiley"				
+				Switch item=node22_led label="LED"				
+			}			
+		}		
+		Text label="PeterVA" icon="smiley" {
+			Frame {
+				Text item=node30_test label="teller [%d]" icon="smiley"				
+				Switch item=node30_led label="LED"				
+			}			
+		}		
+		Text label="Simonjo" icon="boy0" {
+			Frame {
+				Text item=node31_test label="teller [%d]" icon="smiley"				
+				Switch item=node31_led label="LED"				
+			}			
+		}		
+		Text label="Sholva" icon="bath" {
+			Frame {
+				Text item=node32_test label="teller [%d]" icon="smiley"				
+				Switch item=node32_led label="LED"				
+			}			
+		}		
+		Text label="Ion" icon="bedroom" {
+			Frame {
+				Text item=node33_test label="teller [%d]" icon="smiley"				
+				Switch item=node33_led label="LED"				
+			}			
+		}		
+		Text label="Geert" icon="child1" {
+			Frame {
+				Text item=node34_test label="teller [%d]" icon="smiley"				
+				Switch item=node34_led label="LED"				
+				Text item=node34_temp label="temp [%.2f C]" icon="temperature"				
+			}			
+		}		
+		Text label="PeterVP" icon="child2" {
+			Frame {
+				Text item=node35_test label="teller [%d]" icon="smiley"				
+				Switch item=node35_led label="LED"				
+			}			
+		}		
+		Text label="Chris" icon="shield" {
+			Frame {
+				Text item=node36_test label="teller [%d]" icon="smiley"				
+				Switch item=node36_led label="LED"				
+			}			
+		}		
+		Text label="Erik" icon="socket" {
+			Frame {
+				Text item=node37_test label="teller [%d]" icon="smiley"				
+				Switch item=node37_led label="LED"				
+			}			
+		}		
+		Text label="Jan" icon="calendar" {
+			Frame {
+				Text item=node38_test label="teller [%d]" icon="smiley"				
+				Switch item=node38_led label="LED"				
+			}			
+		}		
+		Text label="PeterVH" icon="attic" {
+			Frame {
+				Text item=node39_test label="teller [%d]" icon="smiley"				
+				Switch item=node39_led label="LED"				
+			}			
+		}		
+		Text label="Alain" icon="corridor" {
+			Frame {
+				Text item=node40_test label="teller [%d]" icon="smiley"				
+				Switch item=node40_led label="LED"				
+			}			
+		}		
+		Text label="JorisP" icon="temperature" {
+			Frame {
+				Text item=node41_test label="teller [%d]" icon="smiley"				
+				Switch item=node41_led label="LED"				
+			}			
+		}		
+		Text label="ThomasB" icon="temperature" {
+			Frame {
+				Text item=node42_test label="teller [%d]" icon="smiley"				
+				Switch item=node42_led label="LED"				
+			}			
+		}		
+	}	
+	Frame label="VAE" {
+		Text label="VAE Node" icon="shield" {
+			Frame {
+				Text item=node69_temp valuecolor=[>30="red", >25="orange", >15="green", >5="orange", <=5="blue"] {
+					Frame {
+						Switch item=node69_temp_grafiek label="Temperatuur in Node69" mappings=[0="uur", 1="dag", 2="week"]						
+						Chart item=node69_temp period=h refresh=6000 visibility=[node69_temp_grafiek==0, node69_temp_grafiek==Uninitialized]						
+						Chart item=node69_temp period=D refresh=30000 visibility=[node69_temp_grafiek==1]						
+						Chart item=node69_temp period=W refresh=30000 visibility=[node69_temp_grafiek==2]						
+					}					
+				}				
+				Text item=node69_humidity valuecolor=[>30="red", >25="orange", >15="green", >5="orange", <=5="blue"] {
+					Frame {
+						Switch item=node69_humidity_grafiek label="Vochtigheid in Node69" mappings=[0="uur", 1="dag", 2="week"]						
+						Chart item=node69_humidity period=h refresh=6000 visibility=[node69_humidity_grafiek==0, node69_humidity_grafiek==Uninitialized]						
+						Chart item=node69_humidity period=D refresh=30000 visibility=[node69_humidity_grafiek==1]						
+						Chart item=node69_humidity period=W refresh=30000 visibility=[node69_humidity_grafiek==2]						
+					}					
+				}				
+				Text item=node69_air_co valuecolor=[>30="red", >25="orange", >15="green", >5="orange", <=5="blue"] {
+					Frame {
+						Switch item=node69_air_co_grafiek label="CO in Node69" mappings=[0="uur", 1="dag", 2="week"]						
+						Chart item=node69_air_co period=h refresh=6000 visibility=[node69_air_co_grafiek==0, node69_air_co_grafiek==Uninitialized]						
+						Chart item=node69_air_co period=D refresh=30000 visibility=[node69_air_co_grafiek==1]						
+						Chart item=node69_air_co period=W refresh=30000 visibility=[node69_air_co_grafiek==2]						
+					}					
+				}				
+				Text item=node69_air_lpg valuecolor=[>30="red", >25="orange", >15="green", >5="orange", <=5="blue"] {
+					Frame {
+						Switch item=node69_air_lpg_grafiek label="LPG in Node69" mappings=[0="uur", 1="dag", 2="week"]						
+						Chart item=node69_air_lpg period=h refresh=6000 visibility=[node69_lpg_grafiek==0, node69_air_lpg_grafiek==Uninitialized]						
+						Chart item=node69_air_lpg period=D refresh=30000 visibility=[node69_lpg_grafiek==1]						
+						Chart item=node69_air_lpg period=W refresh=30000 visibility=[node69_lpg_grafiek==2]						
+					}					
+				}				
+				Text item=node69_air_smoke valuecolor=[>30="red", >25="orange", >15="green", >5="orange", <=5="blue"] {
+					Frame {
+						Switch item=node69_air_smoke_grafiek label="Smoke in Node69" mappings=[0="uur", 1="dag", 2="week"]						
+						Chart item=node69_air_smoke period=h refresh=6000 visibility=[node69_smoke_grafiek==0, node69_air_smoke_grafiek==Uninitialized]						
+						Chart item=node69_air_smoke period=D refresh=30000 visibility=[node69_smoke_grafiek==1]						
+						Chart item=node69_air_smoke period=W refresh=30000 visibility=[node69_smoke_grafiek==2]						
+					}					
+				}				
+				Switch item=node69_led				
+				Switch item=node69_relay				
+			}			
+		}		
+	}	
+}

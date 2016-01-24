@@ -1,0 +1,45 @@
+Number	node22_test	"teller [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/22/0/V_VOLUME:state:default]" }
+Switch	node22_led	"LED"	{ mqtt=">[mysensor:MyMQTT/22/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/22/1/V_LIGHT:command:OFF:0]" }
+Number	node30_test	"PeterVA [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/30/0/V_VOLUME:state:default]" }
+Switch	node30_led	"LED"	{ mqtt=">[mysensor:MyMQTT/30/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/30/1/V_LIGHT:command:OFF:0]" }
+Number	node31_test	"Simonjo [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/31/0/V_VOLUME:state:default]" }
+Switch	node31_led	"LED"	{ mqtt=">[mysensor:MyMQTT/31/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/31/1/V_LIGHT:command:OFF:0]" }
+Number	node32_test	"Sholva [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/32/0/V_VOLUME:state:default]" }
+Switch	node32_led	"LED"	{ mqtt=">[mysensor:MyMQTT/32/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/32/1/V_LIGHT:command:OFF:0]" }
+Number	node33_test	"Ion [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/33/0/V_VOLUME:state:default]" }
+Switch	node33_led	"LED"	{ mqtt=">[mysensor:MyMQTT/33/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/33/1/V_LIGHT:command:OFF:0]" }
+Number	node34_test	"Geert [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/34/0/V_VOLUME:state:default]" }
+Switch	node34_led	"LED"	{ mqtt=">[mysensor:MyMQTT/34/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/34/1/V_LIGHT:command:OFF:0]" }
+Number	node34_temp	"temp [%.2f C]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/34/2/V_TEMP:state:default]" }
+Number	node35_test	"PeterVP [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/35/0/V_VOLUME:state:default]" }
+Switch	node35_led	"LED"	{ mqtt=">[mysensor:MyMQTT/35/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/35/1/V_LIGHT:command:OFF:0]" }
+Number	node36_test	"Chris [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/36/0/V_VOLUME:state:default]" }
+Switch	node36_led	"LED"	{ mqtt=">[mysensor:MyMQTT/36/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/36/1/V_LIGHT:command:OFF:0]" }
+Number	node37_test	"Erik [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/37/0/V_VOLUME:state:default]" }
+Switch	node37_led	"LED"	{ mqtt=">[mysensor:MyMQTT/37/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/37/1/V_LIGHT:command:OFF:0]" }
+Number	node38_test	"Jan [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/38/0/V_VOLUME:state:default]" }
+Switch	node38_led	"LED"	{ mqtt=">[mysensor:MyMQTT/38/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/38/1/V_LIGHT:command:OFF:0]" }
+Number	node39_test	"PeterVH [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/39/0/V_VOLUME:state:default]" }
+Switch	node39_led	"LED"	{ mqtt=">[mysensor:MyMQTT/39/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/39/1/V_LIGHT:command:OFF:0]" }
+Number	node40_test	"Alain [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/40/0/V_VOLUME:state:default]" }
+Switch	node40_led	"LED"	{ mqtt=">[mysensor:MyMQTT/40/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/40/1/V_LIGHT:command:OFF:0]" }
+Number	node41_test	"JorisP [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/41/0/V_VOLUME:state:default]" }
+Switch	node41_led	"LED"	{ mqtt=">[mysensor:MyMQTT/41/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/41/1/V_LIGHT:command:OFF:0]" }
+Number	node42_test	"ThomasB [%.2f]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/42/0/V_VOLUME:state:default]" }
+Switch	node42_led	"LED"	{ mqtt=">[mysensor:MyMQTT/42/1/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/42/1/V_LIGHT:command:OFF:0]" }
+Number	node23_deur	"deur veranda [MAP(nl.map):%d]"	<door>	{ mqtt="<[mysensor:MyMQTT/23/0/V_TRIPPED:state:default]" }
+Number	node23_grafiek	"node23 deur grafieken"
+Number	node23_battery	"Battery Level Node 23 [%d %%]"	<boy0>	{ mqtt="<[mysensor:MyMQTT/23/255/BATTERY_LEVEL:state:default]" }
+Number	node23_bat_grafiek	"node23 batterij grafieken"
+Number	node69_temp	"temperatuur [%.2f °C]"	<temperature>	{ mqtt="<[mysensor:MyMQTT/69/0/V_TEMP:state:default]" }
+Number	node69_temp_grafiek
+Number	node69_humidity	"luchtvochtigheid [%.2f %%]"	<water>	{ mqtt="<[mysensor:MyMQTT/69/1/V_HUM:state:default]" }
+Number	node69_humidity_grafiek
+Switch	node69_led	"led"	{ mqtt=">[mysensor:MyMQTT/69/2/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/69/2/V_LIGHT:command:OFF:0]" }
+Number	node69_air_co	"CO2 [%d ppm]"	<co2>	{ mqtt="<[mysensor:MyMQTT/69/3/V_DUST_LEVEL:state:default]" }
+Number	node69_air_co_grafiek
+Number	node69_air_lpg	"gas [%d ppm]"	<gas>	{ mqtt="<[mysensor:MyMQTT/69/4/V_DUST_LEVEL:state:default]" }
+Number	node69_air_lpg_grafiek
+Number	node69_air_smoke	"smoke [%d ppm]"	<tower_smoke>	{ mqtt="<[mysensor:MyMQTT/69/5/V_DUST_LEVEL:state:default]" }
+Switch	node69_relay	"relay"	{ mqtt=">[mysensor:MyMQTT/69/6/V_LIGHT:command:ON:1],>[mysensor:MyMQTT/69/6/V_LIGHT:command:OFF:0]" }
+Number	node69_air_smoke_grafiek

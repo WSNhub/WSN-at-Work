@@ -1,0 +1,10 @@
+"Mtester" : LRC tester based on Atmega328.
+Explore the Alie side voor potential better prices
+In case you plan to play a bit with electronics, this comes in very handy :
+http://nl.aliexpress.com/item/New-2015-12864-LCD-Transistor-Tester-Capacitance-ESR-Meter-Diode-Triode-MOS-NPN-LCR-Mega328/32332114736.html?ws_ab_test=searchweb201556_7_79_78_77_80,searchweb201644_5,searchweb201560_10
+
+"ISP programmer". In case you plan to change/burn another bootloader, you'll need this device
+Explore the Alie side voor potential better prices
+http://nl.aliexpress.com/item/1Pcs-USBTiny-USBtinyISP-AVR-ISP-programmer-2pcs-cable-for-Arduino-bootloader/32335904962.html?ws_ab_test=searchweb201556_7_79_78_77_80,searchweb201644_5,searchweb201560_10
+
+

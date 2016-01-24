@@ -1,0 +1,26 @@
+Below are suggestions. In case you prefer other vendor, please go ahead.
+
+Arduino UNO R3 : (2,44)
+http://nl.aliexpress.com/item/Best-prices-UNO-R3-MEGA328P-for-Arduino-Compatible-Free-Shipping-Dropshipping/32213964945.html?ws_ab_test=searchweb201556_6_71_72_73_74_75,searchweb201527_2,searchweb201560_9
+
+NRF24L01+ (6,17 / 10 pieces) : you would need 1 or 2 as backup
+http://nl.aliexpress.com/item/Free-Shipping-10PCS-NRF24L01-wireless-data-transmission-module-2-4G-the-NRF24L01-upgrade-version-We-are/1680738017.html?ws_ab_test=searchweb201556_6_71_72_73_74_75,searchweb201527_2,searchweb201560_9
+
+NRF24L01+ socket adaptor (5,43 / 10 pieces) : 1 is sufficient. Not mandatory but will significantly improve NRF24 experience ?.  And safe powering.
+http://nl.aliexpress.com/item/Whelesale-10Pcs-lot-Socket-Adapter-plate-Board-for-8Pin-NRF24L01-Wireless-Transceive-module-51-Free-Shipping/32308937228.html?adminSeq=202654950&shopNumber=221555
+
+Dupont : male- male  (0,68)
+http://nl.aliexpress.com/item/Free-shipping-40pcs-lot-10cm-2-54mm-1pin-Male-to-Male-jumper-wire-Dupont-cable/1788303558.html?ws_ab_test=searchweb201556_1_71_72_73_61_74_75,searchweb201527_4,searchweb201560_9
+
+Dupont : male-female (0,61)
+http://nl.aliexpress.com/item/Free-Shipping-40pcs-1lot-10cm-2-54mm-1pin-feMale-to-Male-jumper-wire-Dupont-cable/32329979417.html?ws_ab_test=searchweb201556_1_71_72_73_61_74_75,searchweb201527_4,searchweb201560_9
+
+830 breadboard (1,94)
+http://nl.aliexpress.com/item/Breadboard-830-Point-Solderless-PCB-Bread-Board-MB-102-MB102-With-color-bar-Test-Develop-DIY/1971454251.html?ws_ab_test=searchweb201556_1_71_72_73_74_75,searchweb201527_4,searchweb201560_9
+
+For less then 10, your should be able to build you Love Emitting Device. Ill provide LEDs & resistors. The rest is software ?
+In case you cant wait to connect, the NRF24 radio module works in 1.9-3.6V range. Above this, will permanently damage the device. 
+
+Tips : mobile deals (=order via smartphone) gives sometimes extra discount.
+
+

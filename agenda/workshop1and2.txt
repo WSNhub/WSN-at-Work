@@ -1,0 +1,47 @@
+
+Workshop 1 : build your Love-Emitting-Device (*)
+----------------
+Place, date & time :  C11_03_(), Monday Nov 30th, 17u00-18u30
+
+What do you have to bring :
+-	yourself,
+-	prototyping material to build the LED node (excluding led),  (**)
+-	laptop with working USB & Wifi. Note that the platform connects via USB type B or mini-USB. Please check once you receive it, different variants exists.
+
+What can you expect :
+-	walk through of different hardware components (platform & RF),
+-	installation and explanation of toolchain,
+-	different ways to program it,
+-	explanation of counter sensor & LED actuator program, (based on MySensor API)
+-	integration in existing WSN@work network. Similar to demo youve seen during Agenda meeting
+
+Available material :
+-	LED with resistor, (will be reused in upcoming sessions)
+-	WSN@work network : gateway & controller
+
+
+Workshop 2 : control your Love-Emitting-Device
+----------------
+Place, date & time : F0_09_(Indian Ocean), Tuesday Dec 8th, 17u00-18u30
+
+What do you have to bring :
+-	yourself,
+-	LED node from workshop 1,
+-	Configured laptop from workshop 1.
+
+What can you expect :
+-	walk through of Openhab controller,
+-	installation and configuration on Raspberry Pi v2,
+-	add your LED-node to the controller,
+-	talk about 2016 agenda. (building specific node, MQTT gateway, Openhab automation,)
+
+Available material :
+-	WSN@work network : gateway & controller
+-	OPTIONAL : in case you would like to build your own RPI-based controller, please bring your hardware. As the gateway is implemented as an MQTT client, more controller can co-exist on the same LAN.
+
+After workshop 1, the WSN@work network will be available on D2. 
+Depending on Murphy and other external factors, agenda may change. Most important is that everyone gets most fun out of their nodes.
+
+(*) once you master controlling a LED, you can control whatever other actuator. The rest is electronics. ?
+(**) in case you didn't receive your goodies, don't let this stop the fun to join. Please ping me. 
+

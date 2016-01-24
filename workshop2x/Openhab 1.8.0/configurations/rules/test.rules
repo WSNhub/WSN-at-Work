@@ -1,0 +1,120 @@
+import org.openhab.core.library.types.*  
+import org.openhab.core.persistence.*  
+import org.openhab.model.script.actions.*  
+import org.openhab.binding.*  
+import org.openhab.action.*  
+import org.apache.commons.mail.*  
+
+var long LastUpdate = 0
+
+
+rule "Energy init"
+when
+    System started
+then
+    postUpdate(CumulativeEnergyConsumption, 0 )
+    postUpdate(DailyEnergyConsumption, 0 )
+end 
+
+
+rule "send mail on deur open"  
+when  
+  Item node23_deur changed from 0 to 1
+then  
+  sendMail("peter.van_aken@skynet.be","deur veranda OPEN", "deur van veranda OPEN")  
+end  
+
+
+rule "send mail on deur gesloten"
+when  
+  Item node23_deur changed from 1 to 0
+then  
+  sendMail("peter.van_aken@skynet.be","deur veranda GESLOTEN", "deur van veranda GESLOTEN")  
+end
+
+
+rule "Dagelijks watervebruik berekenen"
+when
+    Item node19_water received update
+then
+    //logInfo("Stats", "berekenen waterverbruik per dag...")
+    var Number gToday = node19_water.state as DecimalType - node19_water.historicState(now.minusHours(now.getHourOfDay)).state as DecimalType
+    var Number gCost
+    gCost = (gToday / 1000) * 3.87248
+    postUpdate(water_per_dag, gToday)
+    postUpdate(water_kostprijs, gCost)
+end
+
+
+rule "Dagelijks gasvebruik berekenen"
+when
+    Item node20_gas received update
+then
+    var Number Today = node20_gas.state as DecimalType - node20_gas.historicState(now.minusHours(now.getHourOfDay)).state as DecimalType
+    var Number gasCost
+    var Number k
+    k = (Today / 1000) * 10.3
+    gasCost =  (k * 2.92) / 100
+    postUpdate(gas_in_kwh_per_dag, k)     
+    postUpdate(gas_per_dag, Today)      
+    postUpdate(gas_kostprijs, gasCost)
+end
+
+
+rule "Energy consumption calculation"
+when
+	Item node18_consumed_power received update
+then
+	var long currentTime = now.millis
+	if (LastUpdate != 0) {
+		var long timeElapsed = currentTime - LastUpdate
+		if (timeElapsed > 0) {
+			var Number power = node18_consumed_power.state as DecimalType
+			var Number energyConsumption = (power * timeElapsed) / 3600000 / 1000 
+			var Number kostelec
+			postUpdate(CumulativeEnergyConsumption, CumulativeEnergyConsumption.state as DecimalType + energyConsumption)
+			postUpdate(DailyEnergyConsumption, DailyEnergyConsumption.state as DecimalType + energyConsumption)
+			kostelec = DailyEnergyConsumption.state as DecimalType * 0.17780
+			postUpdate(electriciteitskost, kostelec)
+		}
+	}
+	LastUpdate = currentTime
+end
+
+
+rule "total Energy cost"
+when
+	Item node18_consumed_power received update
+then
+	postUpdate(energiekost, water_kostprijs.state as DecimalType + electriciteitskost.state as DecimalType + gas_kostprijs.state as DecimalType )
+end
+
+rule "Clear daily consumption"
+when
+Time cron "0 0 0 * * ?" // every day
+then
+    postUpdate(DailyEnergyConsumption, 0)
+    postUpdate(water_per_dag, 0)
+    postUpdate(water_kostprijs, 0)
+    postUpdate(gas_in_kwh_per_dag, 0)     
+    postUpdate(gas_per_dag, 0)      
+    postUpdate(gas_kostprijs, 0)    
+end
+
+rule "kerstboom aan"
+when
+Time cron "0 0 7 * * ?" // every day
+then
+    postUpdate(node69_relay, 1)
+end
+
+
+rule "kerstboom uit"
+when
+Time cron "0 0 10 * * ?" // every day
+then
+    postUpdate(node69_relay, 0)
+end
+
+
+
