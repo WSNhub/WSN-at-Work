@@ -16,4 +16,5 @@ NodeId	NodeName   	RPi IP@
 42      ThomasB 	192.168.0.142
 43      Guy     	192.168.0.143
 44      Hendrik     	192.168.0.144
+45      Killian     	192.168.0.145
 
